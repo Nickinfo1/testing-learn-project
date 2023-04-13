@@ -12,4 +12,11 @@ describe('validateValue', ()=>{
   test('Больше корректного значения', ()=>{
     expect(validateValue(110)).toBe(false);
   });
+  test('Пограничное значения снизу', ()=>{
+    expect(validateValue(0)).toBe(true);
+  });
+  test('Пограничное значение сверху', ()=>{
+    expect(validateValue(100)).toBe(true);
+  });
+
 })
